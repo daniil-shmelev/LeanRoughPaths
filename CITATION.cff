@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this library in your work, please cite it as below."
+title: "LeanRoughPaths: rough path theory and combinatorial Hopf algebras in Lean 4"
+authors:
+  - family-names: Shmelev
+    given-names: Daniil
+year: 2026
+url: "https://github.com/daniil-shmelev/LeanRoughPaths"
+license: Apache-2.0
