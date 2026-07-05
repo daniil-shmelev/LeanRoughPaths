@@ -27,6 +27,13 @@ jobs:
         with:
           use-mathlib-cache: true
 
+      - name: Cache documentation build
+        uses: actions/cache@v4
+        with:
+          path: docbuild/.lake
+          key: docs-${{ hashFiles('lean-toolchain') }}-${{ hashFiles('lake-manifest.json') }}
+          restore-keys: docs-${{ hashFiles('lean-toolchain') }}-
+
       - name: Generate API documentation
         working-directory: docbuild
         run: |
