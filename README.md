@@ -13,3 +13,19 @@ A formalisation of Rough Path theory in Lean 4.
 lake exe cache get
 lake build
 ```
+
+## Area reduction
+
+`Derivation.length_succ_nsmul_prod_smul` is integration by parts for any
+derivation `D` on a commutative ring, with the signed-area form
+`D.area x y = x • D y - y • D x`:
+
+`(m + 1) • (∏ xᵢ) • D y = D (y * ∏ xᵢ) + ∑ᵢ (∏_{j ≠ i} xⱼ) • D.area xᵢ y`.
+
+`HopfAlgebras.Word.AreaReduction.derivation_primitive` applies it to a
+family closed under signed area: every `(∏ X tᵢ) • D (X v)` is `D` of an
+explicit polynomial in the family. `eval_segment` is Chen's identity for
+such moment polynomials along a straight segment, over any field of
+characteristic zero. None of this refers to rooted trees or numerical
+methods; LeanBSeries supplies those for the Williamson order-transfer
+theorem.
