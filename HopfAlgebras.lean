@@ -31,3 +31,5 @@ import HopfAlgebras.Combinatorial.MKW
 import HopfAlgebras.Combinatorial.Graded
 import HopfAlgebras.Combinatorial.GradedInstances
 import HopfAlgebras.Util.DerivationArea
+import HopfAlgebras.Words.Polynomial
+import HopfAlgebras.Words.AreaReduction
